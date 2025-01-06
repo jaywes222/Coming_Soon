@@ -40,7 +40,7 @@ const App = () => {
           <form
             className="flex w-full max-w-lg items-center rounded-full border-2 border-primary bg-white bg-opacity-60 p-1"
             method="post"
-            action="https://chansd.us11.list-manage.com/subscribe/post?u=4ed755a74d6fe3e5327388f18&amp;id=1d016e9b66&amp;f_id=003992e0f0"  
+            action="https://chansd.us11.list-manage.com/subscribe/post?u=4ed755a74d6fe3e5327388f18&amp;id=1d016e9b66&amp;f_id=003992e0f0" 
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             target="_blank"

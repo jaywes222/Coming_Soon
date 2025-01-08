@@ -3,12 +3,14 @@ import Logo from '../src/assets/Logo.svg';
 const App = () => {
   return (
     <section className="relative flex h-screen w-screen flex-col overflow-hidden [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
+      {/* Top Color Bar */}
+      <div className="h-2 bg-gradient-45 w-full absolute z-20"></div>
       {/* Header with logo and call-to-action button */}
       <header className="relative z-20 mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-6 text-white">
         {/* Logo */}
         <div className="flex items-center">
           <a href="#_" aria-label="Go to home page">
-            <img src={Logo} alt="Company Logo" className="w-32 h-auto mt-5" />
+            <img src={Logo} alt="Company Logo" className="w-32 h-auto mt-8" />
           </a>
         </div>
 

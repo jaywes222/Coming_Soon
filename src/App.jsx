@@ -1,7 +1,41 @@
+import { useEffect } from 'react';
+import Typed from "typed.js";
+
 import Logo from '../src/assets/Logo.svg';
 import Monkey from '../src/assets/Monkey.jpeg';
 
 const App = () => {
+  useEffect(() => {
+    const typed = new Typed('#typed-title', {
+      strings: [
+        "Krafting Experiences with Purpose",
+        "Krafting the Future, Today",
+        "Krafting Ideas that Matter with",
+        "Empowering Your Vision with",
+        "Transforming Ideas into Impactful Solutions with",
+        "Innovating Your Digital World with",
+      ],
+      typeSpeed: 60,
+      backSpeed: 20,
+      backDelay: 1500,
+      startDelay: 0,
+      loop: true,
+      showCursor: true,
+      cursorChar: '-',
+      smartBackspace: true,
+      onTypingStart: function () {
+        document.querySelector('.hero-img').style.animation = 'fadeIn 1s ease-in-out';
+      },
+      onTypingEnd: function () {
+        document.querySelector('.hero-img').style.animation = '';
+      }
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <section className="relative flex w-full h-screen flex-col overflow-visible bg-[radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
       {/* Top Color Bar */}
@@ -25,8 +59,8 @@ const App = () => {
         {/* Left Content */}
         <div className="flex-1 flex flex-col justify-center items-start text-center lg:text-left">
           <h1 className="my-4 mt-36 text-gray-800 text-3xl xl:text-4xl font-extrabold mb-8">
-            Elevate Your Ideas with{' '}
-            <span className="text-secondary">SkeptiKrafts</span>
+            <span id="typed-title" className="text-secondary"></span>
+            <span className="text-primary"> SkeptiKrafts</span>
           </h1>
           <p className="leading-normal mb-12 text-gray-600 xl:text-lg">
             Transform your digital vision into sleek, intuitive, and purposeful
@@ -73,11 +107,10 @@ const App = () => {
         <div className="flex-1 flex justify-center items-center px-5 lg:px-10">
           <img
             src={Monkey}
-            className="w-full max-h-[100vh] object-contain hidden lg:block"
+            className="w-full max-h-[100vh] object-contain hidden lg:block hero-img"
             alt="SkeptiKrafts Hero Image"
           />
         </div>
-
       </main>
 
       {/* Features Section */}

@@ -59,11 +59,11 @@ const App = () => {
           </form>
 
           {/* Call to Action */}
-          <div className="mt-8 mb-1 flex text-sm border border-gray-200 rounded-full p-2 text-gray-700 mx-auto lg:mx-0">
-            <span className="bg-secondary text-white rounded-full px-3 h-6 flex items-center xl:inline">
+          <div className="mt-8 mb-1 flex flex-col sm:flex-row items-center text-sm border bg-gray-100 border-gray-400 rounded-full p-4 sm:p-2 text-gray-700 mx-auto lg:mx-0">
+            <span className="bg-secondary text-white rounded-full px-4 py-2 mb-3 sm:mb-0 sm:mr-3">
               Join Now
             </span>
-            <span className="px-2 flex items-center">
+            <span className="px-4 sm:px-2 flex items-center text-center sm:text-left">
               Gain Exclusive Insights and Get Early Access to our Innovations!
             </span>
           </div>
@@ -83,7 +83,7 @@ const App = () => {
       {/* Features Section */}
       <section className="bg-gray-100 py-12">
         <div className="container mx-auto px-5">
-          <h2 className="text-2xl sm:text-4xl font-bold text-left text-indigo-500 uppercase mb-4">
+          <h2 className="text-2xl sm:text-4xl font-bold text-left text-primary uppercase mb-4">
             Our Features
           </h2>
           <p className="text-xl text-gray-500 mb-8">
@@ -96,7 +96,7 @@ const App = () => {
               <img src="./stripe.png" alt="Integrate payments" className="w-full" />
             </div>
             <div className="w-full md:w-1/2 py-12 md:py-0 flex flex-col justify-center px-8 sm:px-16">
-              <h3 className="text-xl lg:text-3xl font-bold leading-none mb-3 mt-16 text-gray-700 -mt-1">
+              <h3 className="text-xl lg:text-3xl font-bold leading-none mb-3 mt-16 text-gray-700">
                 Integrate your own payments
               </h3>
               <p className="text-gray-600 text-xs">
@@ -110,7 +110,7 @@ const App = () => {
           {/* Feature 2 */}
           <div className="block md:flex flex-wrap mb-16 bg-white rounded shadow overflow-hidden">
             <div className="w-full md:w-1/2 py-12 md:py-0 flex flex-col justify-center px-8 sm:px-16">
-              <h3 className="text-xl lg:text-3xl font-bold leading-none mb-3 mt-16 text-gray-700 -mt-1">
+              <h3 className="text-xl lg:text-3xl font-bold leading-none mb-3 mt-16 text-gray-700">
                 Developer focused courses
               </h3>
               <p className="text-gray-600 text-xs">

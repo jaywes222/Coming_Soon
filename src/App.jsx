@@ -1,5 +1,4 @@
 import Logo from '../src/assets/Logo.svg';
-// import Hero from '../src/assets/hero.jpg';
 import Monkey from '../src/assets/Monkey.jpeg';
 
 const App = () => {
@@ -22,21 +21,21 @@ const App = () => {
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto flex flex-col lg:flex-row px-5">
+      <main className="container mx-auto flex flex-col lg:flex-row px-5 py-8 lg:py-0">
         {/* Left Content */}
-        <div className="flex-1 flex flex-col justify-center items-start">
-          <h1 className="my-4 mt-40 text-center lg:text-left w-full text-gray-800 text-3xl xl:text-4xl font-extrabold mb-8">
+        <div className="flex-1 flex flex-col justify-center items-start text-center lg:text-left">
+          <h1 className="my-4 mt-36 text-gray-800 text-3xl xl:text-4xl font-extrabold mb-8">
             Elevate Your Ideas with{' '}
             <span className="text-secondary">SkeptiKrafts</span>
           </h1>
-          <p className="leading-normal mb-12 text-normal xl:text-lg text-center lg:text-left w-full text-gray-600">
+          <p className="leading-normal mb-12 text-gray-600 xl:text-lg">
             Transform your digital vision into sleek, intuitive, and purposeful
             experiences. Stay ahead of the curve with the latest in tech, design, and storytelling.
           </p>
 
           {/* Email Signup Form */}
           <form
-            className="block sm:flex w-full px-0"
+            className="flex flex-col sm:flex-row w-full px-0 mb-4"
             action="https://chansd.us11.list-manage.com/subscribe/post?u=4ed755a74d6fe3e5327388f18&amp;id=1d016e9b66&amp;f_id=003992e0f0"
             method="post"
             id="mc-embedded-subscribe-form"
@@ -44,22 +43,16 @@ const App = () => {
             target="_blank"
           >
             <input
-              className="bg-white border-2 border-gray-300 rounded py-2 px-4 block w-full focus:outline-none focus:border-primary text-black"
+              className="bg-white border-2 border-gray-300 rounded py-2 px-4 block w-full sm:w-2/3 focus:outline-none focus:border-primary text-black mb-4 sm:mb-0"
               id="email"
               type="email"
               name="EMAIL"
               placeholder="you@example.com"
               autoFocus
             />
-            <input
-              type="hidden"
-              name="b_4ed755a74d6fe3e5327388f18_1d016e9b66"
-              tabIndex="-1"
-              value=""
-            />
             <button
               type="submit"
-              className="hover:bg-tertiary text-white ml-0 sm:ml-4 py-2 px-6 rounded bg-primary font-bold w-full sm:w-1/3 mt-4 sm:mt-0"
+              className="hover:bg-tertiary text-white sm:ml-4 py-2 px-6 rounded bg-primary font-bold w-full sm:w-1/3"
             >
               Stay Updated
             </button>
@@ -80,18 +73,20 @@ const App = () => {
         <div className="flex-1 flex justify-center items-center px-5 lg:px-10">
           <img
             src={Monkey}
-            className="w-full max-h-[100vh] object-contain"
+            className="w-full max-h-[100vh] object-contain hidden lg:block"
             alt="SkeptiKrafts Hero Image"
           />
         </div>
+
       </main>
 
-      <section className="bg-gray-100">
-        <div className="container mx-auto mt-0 pb-4 md:pb-24 px-5">
-          <h2 className="w-full pt-8 sm:pt-16 text-2xl sm:text-4xl font-bold text-left text-indigo-500 uppercase">
+      {/* Features Section */}
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto px-5">
+          <h2 className="text-2xl sm:text-4xl font-bold text-left text-indigo-500 uppercase mb-4">
             Our Features
           </h2>
-          <p className="w-full mb-8 md:mb-16 text-xl text-gray-500">
+          <p className="text-xl text-gray-500 mb-8">
             Find out how we are different than the rest
           </p>
 
@@ -129,7 +124,6 @@ const App = () => {
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <footer className="z-20 pb-10 text-center text-sm font-semibold text-black">

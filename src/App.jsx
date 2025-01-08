@@ -2,89 +2,106 @@ import Logo from '../src/assets/Logo.svg';
 
 const App = () => {
   return (
-    <section className="relative flex h-screen w-screen flex-col overflow-hidden [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
+    <section className="relative flex h-screen w-screen flex-col overflow-hidden bg-[radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)]">
       {/* Top Color Bar */}
       <div className="h-2 bg-gradient-45 w-full absolute z-20"></div>
-      {/* Header with logo and call-to-action button */}
-      <header className="relative z-20 mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-6 text-white">
-        {/* Logo */}
-        <div className="flex items-center">
-          <a href="#_" aria-label="Go to home page">
-            <img src={Logo} alt="Company Logo" className="w-32 h-auto mt-8" />
-          </a>
-        </div>
 
-        {/* Call-to-action button */}
-        <div className="relative">
-          <a
-            href="#_"
-            className="w-auto flex-shrink-0 rounded-full bg-secondary sm:px-5 px-4 py-3 text-xs sm:text-sm font-medium text-black border-2 border-primary hover:bg-quaternary transition duration-300"
-          >
-            Stay Ahead of the Curve
-          </a>
-        </div>
+      {/* Header */}
+      <header className="relative z-20 mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-6">
+        <a href="#_" aria-label="Go to home page">
+          <img src={Logo} alt="Company Logo" className="w-32 mt-8" />
+        </a>
+        <a
+          href="#_"
+          className="rounded-full bg-secondary px-4 py-3 text-sm font-medium text-black border-2 border-primary hover:bg-quaternary transition duration-300"
+        >
+          Stay Ahead of the Curve
+        </a>
       </header>
 
-      {/* Main content area with headline, description, and email signup */}
-      <main className="relative py-10 z-20 px-10 md:px-6 h-full w-screen text-white">
-        <div className="mx-auto flex h-full w-full max-w-4xl flex-col md:items-center justify-center space-y-6 md:text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-primary">
-            Krafting Experiences.
-            <span className="block text-secondary bg-clip-text">
-              With Purpose.
-            </span>
+      {/* Main Content */}
+      <div className="container mx-auto flex flex-col lg:flex-row px-5">
+        {/* Left Content */}
+        <div className="flex-1 flex flex-col justify-center items-start">
+          <h1 className="my-4 mt-24 text-center lg:text-left w-full px-2 text-gray-800 text-3xl xl:text-4xl font-extrabold mb-8">
+            Elevate Your Ideas with{' '}
+            <span className="text-secondary">SkeptiKrafts</span>
           </h1>
-          <p className="mx-auto max-w-2xl sm:text-lg md:text-xl md:leading-8 text-gray-500">
-            Get ready for sleek, intuitive, and impactful digital solutions that don’t just work—they wow. Sign up to stay ahead of the curve with SkeptiKrafts!
+          <p className="leading-relaxed mb-12 text-normal xl:text-lg text-center lg:text-left w-full px-4 lg:px-0 text-gray-600">
+            Transform your digital vision into sleek, intuitive, and purposeful
+            experiences. Stay ahead of the curve with the latest in tech,
+            design, and storytelling.
           </p>
 
-          {/* Email signup */}
+          {/* Email Signup Form */}
           <form
-            className="flex w-full max-w-lg items-center rounded-full border-2 border-primary bg-white bg-opacity-60 p-1"
+            className="block sm:flex w-full px-0"
+            action="https://chansd.us11.list-manage.com/subscribe/post?u=4ed755a74d6fe3e5327388f18&amp;id=1d016e9b66&amp;f_id=003992e0f0"
             method="post"
-            action="https://chansd.us11.list-manage.com/subscribe/post?u=4ed755a74d6fe3e5327388f18&amp;id=1d016e9b66&amp;f_id=003992e0f0"  
             id="mc-embedded-subscribe-form"
             name="mc-embedded-subscribe-form"
             target="_blank"
           >
-            <input type="hidden" name="b_4ed755a74d6fe3e5327388f18_1d016e9b66" tabIndex="-1" value="" />
             <input
-              type="text"
-              className="w-full bg-transparent bg-none px-5 font-medium text-black focus:outline-none"
-              placeholder="Email Address"
-              autoFocus=""
-              name='EMAIL'
+              className="bg-white border-2 border-gray-300 rounded py-2 px-4 block w-full focus:outline-none focus:border-primary text-black"
+              id="email"
+              type="email"
+              name="EMAIL"
+              placeholder="you@example.com"
+              autoFocus
+            />
+            <input
+              type="hidden"
+              name="b_4ed755a74d6fe3e5327388f18_1d016e9b66"
+              tabIndex="-1"
+              value=""
             />
             <button
-              className="w-auto flex-shrink-0 rounded-full bg-secondary px-5 py-3 text-sm font-medium text-black border-2 border-primary hover:bg-quaternary transition duration-300"
+              type="submit"
+              className="hover:bg-tertiary text-white ml-0 sm:ml-4 py-2 px-6 rounded bg-primary font-bold w-full sm:w-1/3 mt-4 sm:mt-0"
             >
-              Get Notified
+              Stay Updated
             </button>
           </form>
-        </div>
-      </main>
 
-      {/* Footer with trusted by logos */}
-      <footer className="z-20 h-auto md:h-32 w-full flex-shrink-0 pb-16 md:pb-10 text-white">
-        <div className="w-full text-black text-center text-sm font-semibold md:pb-0 pb-5">
-          Already Trusted by Many
+          {/* Call to Action */}
+          <div className="mt-8 flex text-sm border border-gray-200 rounded-full p-2 text-gray-700 mx-auto lg:mx-0">
+            <span className="bg-secondary text-white rounded-full px-3 h-6 flex items-center xl:inline">
+              Join Now
+            </span>
+            <span className="px-2 flex items-center">
+              Gain Exclusive Insights and Get Early Access to our Innovations!
+            </span>
+          </div>
         </div>
-        <div className="grid h-full w-full max-w-4xl mx-auto grid-cols-3 sm:grid-cols-6 md:gap-0 gap-5 md:grid-cols-5 items-center px-6">
-          <a href="#_" className="flex h-full items-center justify-center md:col-span-1 sm:col-span-2">
-            <img src="https://cdn.devdojo.com/images/january2023/logo-01.png" className="w-16 h-auto" alt="Logo 01" />
-          </a>
-          <a href="#_" className="flex h-full items-center justify-center md:col-span-1 sm:col-span-2">
-            <img src="https://cdn.devdojo.com/images/january2023/logo-02.png" className="h-8 w-auto" alt="Logo 02" />
-          </a>
-          <a href="#_" className="flex h-full items-center justify-center md:col-span-1 sm:col-span-2">
-            <img src="https://cdn.devdojo.com/images/january2023/logo-03.png" className="h-10 w-auto" alt="Logo 03" />
-          </a>
-          <a href="#_" className="h-full items-center justify-center md:col-span-1 sm:col-span-3 sm:flex hidden">
-            <img src="https://cdn.devdojo.com/images/january2023/logo-04.png" className="h-9 w-auto" alt="Logo 04" />
-          </a>
-          <a href="#_" className="h-full items-center justify-center md:col-span-1 sm:col-span-3 sm:flex hidden">
-            <img src="https://cdn.devdojo.com/images/january2023/logo-05.png" className="h-11 w-auto" alt="Logo 05" />
-          </a>
+
+        {/* Right Content */}
+        <div className="flex-1 hidden lg:flex items-center justify-center relative pl-16">
+          <img
+            src="./skeptikrafts-hero.jpg"
+            className="w-full object-cover relative bottom-0 z-10 mt-32"
+            alt="SkeptiKrafts Hero Image"
+          />
+        </div>
+      </div>
+
+      {/* Footer */}
+      <footer className="z-20 pb-10 text-center text-sm font-semibold text-black">
+        <p>Already Trusted by Many</p>
+        <div className="mt-4 grid grid-cols-3 sm:grid-cols-6 gap-5 items-center max-w-4xl mx-auto">
+          {[...Array(5)].map((_, idx) => (
+            <a
+              key={idx}
+              href="#_"
+              className="flex items-center justify-center"
+            >
+              <img
+                src={`https://cdn.devdojo.com/images/january2023/logo-0${idx + 1}.png`}
+                alt={`Logo ${idx + 1}`}
+                className="h-10 w-auto"
+              />
+            </a>
+          ))}
         </div>
       </footer>
     </section>

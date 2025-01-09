@@ -11,9 +11,6 @@ const App = () => {
         "Krafting Experiences with Purpose",
         "Krafting the Future, Today",
         "Krafting Ideas that Matter with",
-        "Empowering Your Vision with",
-        "Transforming Ideas into Impactful Solutions with",
-        "Innovating Your Digital World with",
       ],
       typeSpeed: 60,
       backSpeed: 20,
@@ -42,27 +39,27 @@ const App = () => {
       <div className="h-2 bg-gradient-45 w-full absolute z-20"></div>
 
       {/* Header */}
-      <header className="relative z-20 mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-6">
+      <header className="relative z-20 mx-auto flex h-24 w-full max-w-7xl items-center justify-between px-4 sm:px-6">
         <a href="#_" aria-label="Go to home page">
-          <img src={Logo} alt="Company Logo" className="w-32 mt-8" />
+          <img src={Logo} alt="Company Logo" className="w-28 sm:w-32 mt-8" />
         </a>
         <a
           href="#_"
-          className="rounded-full bg-secondary px-4 py-3 text-sm font-medium text-black border-2 border-primary hover:bg-quaternary transition duration-300"
+          className="rounded-full bg-secondary px-4 py-2 sm:py-3 text-xs sm:text-sm font-medium text-black border-2 border-primary hover:bg-quaternary transition duration-300"
         >
           Stay Ahead of the Curve
         </a>
       </header>
 
       {/* Main Content */}
-      <main className="container mx-auto flex flex-col lg:flex-row px-5 py-8 lg:py-0">
+      <main className="container mx-auto flex flex-col lg:flex-row px-4 sm:px-6 py-8 lg:py-0">
         {/* Left Content */}
         <div className="flex-1 flex flex-col justify-center items-start text-center lg:text-left">
-          <h1 className="my-4 mt-36 text-gray-800 text-3xl xl:text-4xl font-extrabold mb-8">
+          <h1 className="my-4 mt-24 sm:mt-36 text-gray-800 text-2xl sm:text-3xl xl:text-4xl font-extrabold mb-8">
             <span id="typed-title" className="text-secondary"></span>
             <span className="text-primary"> SkeptiKrafts</span>
           </h1>
-          <p className="leading-normal mb-12 text-gray-600 xl:text-lg">
+          <p className="leading-normal mb-8 text-gray-600 text-sm sm:text-base xl:text-lg">
             Transform your digital vision into sleek, intuitive, and purposeful
             experiences. Stay ahead of the curve with the latest in tech, design, and storytelling.
           </p>
@@ -93,7 +90,7 @@ const App = () => {
           </form>
 
           {/* Call to Action */}
-          <div className="mt-8 mb-1 flex flex-col sm:flex-row items-center text-sm border bg-gray-100 border-gray-400 rounded-full p-4 sm:p-2 text-gray-700 mx-auto lg:mx-0">
+          <div className="mt-8 mb-1 flex flex-col sm:flex-row items-center text-xs sm:text-sm border bg-gray-100 border-gray-400 rounded-full p-4 sm:p-2 text-gray-700 mx-auto lg:mx-0">
             <span className="bg-secondary text-white rounded-full px-4 py-2 mb-3 sm:mb-0 sm:mr-3">
               Join Now
             </span>
@@ -114,25 +111,25 @@ const App = () => {
       </main>
 
       {/* Features Section */}
-      <section className="bg-gray-100 py-12">
-        <div className="container mx-auto px-5">
-          <h2 className="text-2xl sm:text-4xl font-bold text-left text-primary uppercase mb-4">
+      <section className="bg-gray-100 py-8 sm:py-12">
+        <div className="container mx-auto px-4 sm:px-6">
+          <h2 className="text-xl sm:text-2xl lg:text-4xl font-bold text-left text-primary uppercase mb-4">
             Our Features
           </h2>
-          <p className="text-xl text-gray-500 mb-8">
+          <p className="text-sm sm:text-lg text-gray-500 mb-6 sm:mb-8">
             Find out how we are different than the rest
           </p>
 
           {/* Feature 1 */}
-          <div className="block md:flex flex-wrap mb-16 bg-white rounded shadow overflow-hidden">
+          <div className="block md:flex flex-wrap mb-8 sm:mb-16 bg-white rounded shadow overflow-hidden">
             <div className="w-full md:w-1/2">
               <img src="./stripe.png" alt="Integrate payments" className="w-full" />
             </div>
-            <div className="w-full md:w-1/2 py-12 md:py-0 flex flex-col justify-center px-8 sm:px-16">
-              <h3 className="text-xl lg:text-3xl font-bold leading-none mb-3 mt-16 text-gray-700">
+            <div className="w-full md:w-1/2 py-6 sm:py-12 md:py-0 flex flex-col justify-center px-6 sm:px-16">
+              <h3 className="text-lg sm:text-xl lg:text-3xl font-bold leading-none mb-3 mt-6 sm:mt-16 text-gray-700">
                 Integrate your own payments
               </h3>
-              <p className="text-gray-600 text-xs">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 You can integrate your Stripe or Braintree payment system right into
                 your course. This means when someone pays for your course, the money
                 will be deposited directly into your account!
@@ -141,27 +138,27 @@ const App = () => {
           </div>
 
           {/* Feature 2 */}
-          <div className="block md:flex flex-wrap mb-16 bg-white rounded shadow overflow-hidden">
-            <div className="w-full md:w-1/2 py-12 md:py-0 flex flex-col justify-center px-8 sm:px-16">
-              <h3 className="text-xl lg:text-3xl font-bold leading-none mb-3 mt-16 text-gray-700">
-                Developer focused courses
+          <div className="block md:flex flex-wrap mb-8 sm:mb-16 bg-white rounded shadow overflow-hidden">
+            <div className="w-full md:w-1/2 py-6 sm:py-12 md:py-0 flex flex-col justify-center px-6 sm:px-16">
+              <h3 className="text-lg sm:text-xl lg:text-3xl font-bold leading-none mb-3 mt-6 sm:mt-16 text-gray-700">
+                Developer-focused courses
               </h3>
-              <p className="text-gray-600 text-xs">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Display code examples and allow users to download files. WeTeach is
                 focused on developers teaching other people to become developers.
               </p>
             </div>
             <div className="w-full md:w-1/2">
-              <img src="./screenshot.png" alt="Developer focused courses" className="w-full" />
+              <img src="./screenshot.png" alt="Developer-focused courses" className="w-full" />
             </div>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="z-20 pb-10 text-center text-sm font-semibold text-black">
+      <footer className="z-20 pb-8 sm:pb-10 text-center text-xs sm:text-sm font-semibold text-black">
         <p>Already Trusted by Many</p>
-        <div className="mt-4 grid grid-cols-3 sm:grid-cols-6 gap-5 items-center max-w-4xl mx-auto">
+        <div className="mt-4 grid grid-cols-3 sm:grid-cols-6 gap-3 sm:gap-5 items-center max-w-4xl mx-auto">
           {[...Array(5)].map((_, idx) => (
             <a
               key={idx}
@@ -171,7 +168,7 @@ const App = () => {
               <img
                 src={`https://cdn.devdojo.com/images/january2023/logo-0${idx + 1}.png`}
                 alt={`Logo ${idx + 1}`}
-                className="h-10 w-auto"
+                className="h-8 sm:h-10 w-auto"
               />
             </a>
           ))}
